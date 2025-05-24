@@ -16,11 +16,11 @@ CREATE TABLE teachers (
 
 CREATE TABLE subjects (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL
+    name TEXT NOT NULL,
     teacher_id INTEGER,
-    FOREIGN KEY (teacher_id) REFERENCES teachers (id)
-
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id)
 );
+
 
 CREATE TABLE students (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -34,6 +34,7 @@ CREATE TABLE grades (
     student_id INTEGER,
     subject_id INTEGER,
     grade INTEGER,
+    date_of DATE NOT NULL,
     FOREIGN KEY (student_id) REFERENCES students (id),
     FOREIGN KEY (subject_id) REFERENCES subjects (id)
 )

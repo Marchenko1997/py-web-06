@@ -11,4 +11,4 @@ def run_query(filename):
             print(row)
 
 if __name__ == '__main__':
-    run_query("queries/query_1.sql")            
+    run_query("queries/query_7.sql")            

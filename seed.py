@@ -46,7 +46,7 @@ for student_id in range(1, 51):
     for subject_id in range(1, len(subjects) + 1):
         for _ in range(randint(10, 20)):
             grade = randint(60, 100)
-            date = datetime(2023, randint(1, 12), randint(1, 28)).date()
+            date = datetime(2025, randint(1, 12), randint(1, 28)).isoformat()
             cur.execute(
                 "INSERT INTO grades (student_id, subject_id, grade, date_of) VALUES (?, ?, ?, ?)",
                 (student_id, subject_id, grade, date),
